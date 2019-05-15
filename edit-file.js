@@ -17,7 +17,12 @@ let editFile = (filePath) => {
       if (err) {
         console.error(err);
       }
-      console.log(`new contents: ${randomVal}`);
+      fs.readFile(filePath, (err, data) => {
+        if (err) {
+          throw err;
+        }
+        console.log(data.toString());
+      });
     });
   });
 };

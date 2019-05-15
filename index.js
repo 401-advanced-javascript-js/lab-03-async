@@ -13,5 +13,5 @@ fileReader(files, (err, data) => {
   if (err) {
     throw err;
   }
-  console.log('From Callback:', data);
+  console.log('From Callback: ', data);
 });
