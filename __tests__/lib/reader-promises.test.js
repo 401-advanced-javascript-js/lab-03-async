@@ -13,6 +13,7 @@ describe('File Reader Module', () => {
     // function so that you can trap it
     reader(files, (err, data) => {
       expect(err).toBeDefined();
+      expect(data).toBeUndefined();
       done();
     });
   });
@@ -23,7 +24,6 @@ describe('File Reader Module', () => {
       expect(err).toBeNull();
       expect(data instanceof Array).toBeTruthy();
       expect(data.length).toBe(3);
-      console.log(data);
       done();
     });
   });
